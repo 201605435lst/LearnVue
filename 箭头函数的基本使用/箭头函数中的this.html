@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+//结论：箭头函数中的this引用的是最近作用域中的this,向外层一层层的查找this
+            const obj ={
+                aaa(){
+                    setTimeout(function () {
+                        setTimeout(function(){
+                            console.log(this)
+                        })
+                        setTimeout(() =>{
+                             console.log(this)
+                     })   
+                    });
+                    setTimeout(() =>{
+                        setTimeout(function(){
+                            console.log(this)
+                        });
+                        setTimeout(() =>{
+                             console.log(this)
+                     })  
+                     })   
+                }
+            }
+            obj.aaa()
+        </script>
+    </body>
+</html>

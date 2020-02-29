@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+<script>
+Promise.all([
+     new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        resolve("result1")
+       },2000)
+     }),
+     new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        resolve("result2")
+       },1000)
+     })
+]).then(results=>{
+    console.log(results)
+})
+    </script>
+    </body>
+</html>

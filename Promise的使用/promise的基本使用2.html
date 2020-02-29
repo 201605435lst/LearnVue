@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+<script>
+    new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("hello Promise")
+            // reject("error Message")
+        },5000)
+    }).then(
+        (data)=>{
+        console.log(data)
+                 },
+        (err)=>{
+        console.log(err)
+            })
+    </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            // //什么时候使用箭头函数
+            // setTimeout(function () {
+            //     console.log(this)
+            // },1000);
+            // setTimeout(() =>{
+            //     console.log(this)
+            // },1000)
+            //结论：箭头函数中的this引用的是最近作用域中的this,
+            //向外层一层层的查找this
+            const obj ={
+                aaa(){
+                    setTimeout(function () {
+                    console.log(this)
+                    });
+                    setTimeout(() =>{
+                    console.log(this)
+                     })   
+                }
+            }
+            obj.aaa()
+        </script>
+    </body>
+</html>
